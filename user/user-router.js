@@ -20,7 +20,7 @@ router.post("/", (req, res) => {
   } else {
     Users.addUser(name)
       .then(users => {
-        res.status(200).json(users);
+        res.status(201).json(users);
       })
       .catch(({ name, message, stack, code }) => {
         console.log(name, message, stack, code);
